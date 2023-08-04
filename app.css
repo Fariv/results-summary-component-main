@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', Times, serif;
+}
+
+html, body {
+    margin: 0;
+    font-size: 18px;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;    /* Footer height */
+    min-height: 100vh;
+    background-color: hsl(221, 100%, 96%);
+}
+
+.result-summary {
+    display: flex;
+    width: 738px;
+    height: 513px;
+    border-radius: 1.8rem;
+    position: relative;
+}
+
+.left-side-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 367px;
+    max-width: 367px;
+    color: hsl(0, 0%, 100%);
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 1.8rem;
+    z-index: 1;
+}
+
+.left-side-card > h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 105px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.left-side-card > .circle-container {
+    display: flex;
+    justify-content: center;
+    height: 201px;
+}
+
+.left-side-card > .circle-container > .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    width: 201px;
+    height: 201px;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.circle > h1 {
+    margin: 0;
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.circle > .subtitle {
+    color: hsla(0, 0%, 100%, 0.4);
+}
+
+.left-side-card > h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.left-side-card > p.subtitle {
+    text-align: center;
+    color: hsla(0, 0%, 100%, 0.6);
+    width: 264px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.right-side-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2.25rem;
+    width: 398px;
+    height: 100%;
+    right: 0;
+    background-color: hsl(0, 0%, 100%);
+    border-top-right-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
+    position: absolute;
+    padding: 1rem 2.25rem 1rem 3.5rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.95rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.row-reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.row-memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.row-verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.row-visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.max-mark {
+    color: hsl(240, 1%, 63%);
+}
+
+.row .mark {
+    color: hsl(224, 30%, 27%);
+}
+
+.row .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+.row .component {
+    display: flex;
+}
+
+.row .component-reaction {
+    color: hsl(0, 100%, 67%);
+}
+
+.row .component-memory {
+    color: hsl(39, 100%, 56%);
+}
+
+.row .component-verbal {
+    color: hsl(166, 100%, 37%);
+}
+
+.row .component-visual {
+    color: hsl(234, 85%, 45%);
+}
+
+.row .icon-reaction {
+    background: url("./assets/images/icon-reaction.svg") no-repeat;
+}
+.row .icon-memory {
+    background: url("./assets/images/icon-memory.svg") no-repeat;
+}
+.row .icon-verbal {
+    background: url("./assets/images/icon-verbal.svg") no-repeat;
+}
+.row .icon-visual {
+    background: url("./assets/images/icon-visual.svg") no-repeat;
+}
+
+button.btn {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: hsl(0, 0%, 100%);
+    outline: none;
+    border: none;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+    font-size: 18px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;            /* Footer height */
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
