@@ -94,7 +94,6 @@ html, body {
 .right-side-card {
     display: flex;
     flex-direction: column;
-    padding: 1rem 2.25rem;
     width: 398px;
     height: 100%;
     right: 0;
@@ -176,8 +175,14 @@ html, body {
     background: url("./assets/images/icon-visual.svg") no-repeat;
 }
 
-button.btn {
+button.btn:hover, 
+button.btn:active{
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+button.btn {
+    cursor: pointer;
+    background-color: hsl(224, 30%, 27%);
     color: hsl(0, 0%, 100%);
     outline: none;
     border: none;
@@ -200,4 +205,34 @@ button.btn {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 768px) {
+    #content-wrap {
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: hsl(0, 100%, 100%);
+    }
+
+    .result-summary {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .left-side-card {
+        max-width: 100%;
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        align-self: center;
+    }
+
+    .right-side-card {
+        position: relative;
+        padding: 0 2rem 2rem 2rem;
+        align-self: center;
+        width: 100%;
+        border-radius: 0;
+    }
 }
