@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', Times, serif;
+}
+
+html, body, #root {
+    margin: 0;
+    font-size: 18px;
+}
