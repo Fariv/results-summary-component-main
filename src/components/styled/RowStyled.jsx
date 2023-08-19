@@ -25,6 +25,11 @@ const RowStyled = styled.div`
     .component-visual {
         color: hsl(234, 85%, 45%);
     }
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem;
+    }
     .icon-reaction {
         background: url("${reactionicon}") no-repeat;
     }
