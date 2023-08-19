@@ -8,7 +8,7 @@ const RightSideCard = () => {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch(window.location.origin + '/data.json')
+        fetch('./data.json')
             .then((response) => response.json())
             .then((json) => setData(json));
     }, []);
