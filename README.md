@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github solution URL](https://github.com/Fariv/results-summary-component-main)
+- Live Site URL: [Result Summary Component LIVE site](https://fariv.github.io/results-summary-component-main/)
 
 ## My process
 
