@@ -1,67 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import RightSideCardStyled from './styled/RightSideCardStyled';
-import RowStyled from './styled/RowStyled';
-import { styled } from 'styled-components';
 import ButtonStyled from './styled/ButtonStyled';
+import Row from './Row';
+import Loader from './Loader';
 
-const RowReaction = styled(RowStyled)`
-    background-color: hsla(0, 100%, 67%, 0.1);
-`;
-const RowMemory = styled(RowStyled)`
-    background-color: hsla(39, 100%, 56%, 0.1);
-`;
-const RowVerbal = styled(RowStyled)`
-    background-color: hsla(166, 100%, 37%, 0.1);
-`;
-const RowVisual = styled(RowStyled)`
-    background-color: hsla(234, 85%, 45%, 0.1);
-`;
 const RightSideCard = () => {
+
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        fetch(window.location.origin + '/data.json')
+            .then((response) => response.json())
+            .then((json) => setData(json));
+    }, []);
+
+    let rowsComps = [];
+    if (data.length > 0) {
+        
+        rowsComps = [];
+        for (var i = 0; i < data.length; i++) {
+
+            let categoryslug = data[i].category.toLowerCase();
+            let eachRowComp = (<Row key={i} rowtype={data[i].category}>
+                <div className={"component component-" + categoryslug}>
+                    <div className={"icon icon-" + categoryslug}></div>
+                    <span>{data[i].category}</span>
+                </div>
+                <div className="states">
+                    <span className="mark">{data[i].score}</span> <span className="max-mark">/ 100</span>
+                </div>
+            </Row>);
+
+            rowsComps.push(eachRowComp);
+        }
+    } else {
+
+        rowsComps = <Loader />
+    }
+
     return (
         <RightSideCardStyled>
             <h3>
                 Summary
             </h3>
 
-            <RowReaction>
-                <div className="component component-reaction">
-                    <div className="icon icon-reaction"></div>
-                    <span>Reaction</span>
-                </div>
-                <div className="states">
-                    <span className="mark">80</span> <span className="max-mark">/ 100</span>
-                </div>
-            </RowReaction>
-
-            <RowMemory>
-                <div className="component component-memory">
-                    <div className="icon icon-memory"></div>
-                    <span>Memory</span>
-                </div>
-                <div className="states">
-                    <span className="mark">92</span> <span className="max-mark">/ 100</span>
-                </div>
-            </RowMemory>
-
-            <RowVerbal>
-                <div className="component component-verbal">
-                    <div className="icon icon-verbal"></div>
-                    <span>Verbal</span>
-                </div>
-                <div className="states">
-                    <span className="mark">61</span> <span className="max-mark">/ 100</span>
-                </div>
-            </RowVerbal>
-
-            <RowVisual>
-                <div className="component component-visual">
-                    <div className="icon icon-visual"></div>
-                    <span>Visual</span>
-                </div>
-                <div className="states">
-                    <span className="mark">72</span> <span className="max-mark">/ 100</span>
-                </div>
-            </RowVisual>
+            {rowsComps}
 
             <ButtonStyled>
                 Continue

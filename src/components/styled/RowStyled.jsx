@@ -1,4 +1,8 @@
 import { styled } from "styled-components";
+import reactionicon from "../../assets/images/icon-reaction.svg";
+import memoryicon from "../../assets/images/icon-memory.svg";
+import verbalicon from "../../assets/images/icon-verbal.svg";
+import visualicon from "../../assets/images/icon-visual.svg";
 
 const RowStyled = styled.div`
     display: flex;
@@ -22,16 +26,16 @@ const RowStyled = styled.div`
         color: hsl(234, 85%, 45%);
     }
     .icon-reaction {
-        background: url("./assets/images/icon-reaction.svg") no-repeat;
+        background: url("${reactionicon}") no-repeat;
     }
     .icon-memory {
-        background: url("./assets/images/icon-memory.svg") no-repeat;
+        background: url("${memoryicon}") no-repeat;
     }
     .icon-verbal {
-        background: url("./assets/images/icon-verbal.svg") no-repeat;
+        background: url("${verbalicon}") no-repeat;
     }
     .icon-visual {
-        background: url("./assets/images/icon-visual.svg") no-repeat;
+        background: url("${visualicon}") no-repeat;
     }
 `;
 
